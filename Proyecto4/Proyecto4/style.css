@@ -1,0 +1,279 @@
+/* Nombre: Antonio Gil */
+/* Fecha: 14/04 */
+/* Hoja de estilos de pagina Proyecto4 */
+
+/* Body - Global*/
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: rgb(233, 233, 233);
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+/* * * * * * * * */
+/* Menú superior */
+/* * * * * * * * */
+.menu{
+    background-color: rgb(255, 255, 255,0.8);
+    backdrop-filter: blur(2px);
+    border-top: rgb(168, 168, 168) 1px solid;
+    padding: 0.3em;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    z-index: 1;
+    flex-grow: 1;
+    display: flex;
+}
+
+/* * * * * * * * * * * */
+/* Barra busqueda menú */
+/* * * * * * * * * * * */
+input {
+    margin-left: 1.5em;
+    transition: width 0.6s ease-in-out;
+    width: 25em;
+    height: 1.5em;
+    background-color: rgb(238, 238, 238,0.8);
+    color: rgb(158, 158, 158);
+    border-radius: 0.9em;
+    padding: 1em;
+    margin-right: 2em;
+    border: none;
+    text-align: center;
+}
+
+input:focus {
+    width: 30%;
+}
+
+.temas input {
+    margin-top: 0.4em;
+}
+
+/* * * * * * * * * * * * * */
+/* Botones inicio/Registro */
+/* * * * * * * * * * * * * */
+.btn-menu {
+    font-weight: bold;
+    color: white;
+    border-radius: 0.4em;
+    margin-left: 0.5em;
+    padding: 0.4em;
+    width: 10em;
+    display: flex;
+    align-items: center;
+    transition: width 0.6s ease-in-out;
+
+    background: linear-gradient(306deg, #2fcea5, #792fce);
+    background-size: 400% 400%;
+
+    -webkit-animation: btn-animation 6s ease infinite;
+    -moz-animation: btn-animation 6s ease infinite;
+    animation: btn-animation 6s ease infinite;
+}
+
+.btn-menu a {
+    margin: 0 auto;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-menu:hover {
+    width: 10%;
+}
+
+.temas .btn-menu {
+    margin-top: 0.4em;
+}
+
+@-webkit-keyframes btn-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes btn-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes btn-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* * * * * * * * * * * * */
+/* Mascara Img posterior */
+/* * * * * * * * * * * * */
+.back {
+    -webkit-mask-image: linear-gradient(black, transparent);
+    mask-image: linear-gradient(black, transparent);
+}
+
+/* * * * * * * * * * * * * * */
+/* Ventanas del Foro - Temas */
+/* * * * * * * * * * * * * * */
+.temasForo {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.temas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 70%;
+    padding: 2em;
+}
+
+.temasNoDestacados {
+    background-color: white;
+    margin: 15em auto;
+    width: 70%;
+    padding: 2em;
+}
+
+/* * * * * * * * * * * * * * */
+/* Ventanas del Foro - BLUR  */
+/* * * * * * * * * * * * * * */
+#noRegBlur {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    background-color: rgb(252, 93, 93);
+}
+
+/* * * * * * * * * * * * * * */
+/* Estilo cada Tema del Foro */
+/* * * * * * * * * * * * * * */
+.tema {
+    align-items: center;
+    background-color: aliceblue;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 3px solid rgb(156, 17, 190);
+    margin-bottom: 1em;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.tema a {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+}
+
+.tema .info {
+    margin-left: 20%;
+}
+
+.tema:hover {
+    background-color: rgb(212, 174, 255);
+}
+
+/* * * * * * * * * * * * * * */
+/* Mensajes de los usuaruios */
+/* * * * * * * * * * * * * * */
+.respuesta {
+    border: 1px solid black;
+    width: 70%;
+    margin: 1em auto;
+    padding: 1em;
+}
+
+/* * * * * * * * * * * * */
+/* Botón para descender  */
+/* * * * * * * * * * * * */
+#down-btn {
+    border-radius: 0.2em;
+    margin: 0 auto;
+    padding-left: 0.2em;
+    width: 3em;
+    background-color: rgb(238, 238, 238);
+}
+
+/* * * * * * * * * * * * * * * * * * * */
+/* Usuarios conectados simultaneamente */
+/* * * * * * * * * * * * * * * * * * * */
+#id_generador {
+    text-align: center;
+    margin-top: -10em;
+    margin-bottom: 2em;
+}
+
+#id_generador input{
+    background-color: rgb(233, 233, 233);
+    color: rgb(233, 233, 233);
+    -webkit-appearance: none;
+}
+
+/* * * * * * * * * * * * * * * * * * */
+/* Animacion titulos de cada ventana */
+/* * * * * * * * * * * * * * * * * * */
+.maquina {
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 12ch;
+
+    animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+    overflow:hidden;
+    }
+
+    @keyframes typing {
+    from { width: 0}
+    }
+
+    @keyframes blink {
+     50% { border-color: transparent}
+}
+
+/* * * * * * * * * * * * * * * * * */
+/* Error - Cualquier tipo de error */
+/* * * * * * * * * * * * * * * * * */
+#error {
+    border: 2px solid red;
+    animation: muestra 2s;
+}
+
+@keyframes muestra{
+    from {opacity: 0;}
+    to {opacity: 1; }
+  }
+
+/* * * * * * * * * * * * * * * * */
+/* Error - Usuario no registrado */
+/* * * * * * * * * * * * * * * * */
+.noRegistrado {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 50%;
+    padding: 2em;
+}
+
+/* * * * * * * * * * * * * * * * * */
+/* Estilo barra de desplazamiento  */
+/* * * * * * * * * * * * * * * * * */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: linear-gradient(306deg, #2fcea5, #792fce);;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 0.2em;
+}

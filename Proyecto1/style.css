@@ -1,0 +1,342 @@
+/* Nombre: Antonio Gil */
+/* Fecha: 31/01 */
+/* Hoja de estilos de parrafos en parte inferior y superior 1 */
+
+body {
+    height: 100%;
+    margin: 0;
+    background-color: rgb(233, 233, 233);
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.bg-image1 {
+
+    position: relative;
+
+    background-image: url("img/img.jpg");
+
+    min-height: 70em;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-image2 {
+
+    position: relative;
+
+    background-image: url("img/img3.jpg");
+
+    min-height: 70em;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-image3 {
+
+    position: relative;
+
+    background-image: url("img/img2.jpg");
+
+    min-height: 70em;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.menu{
+    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 2em;
+    background-color: rgb(255, 255, 255);
+    border-bottom: rgb(168, 168, 168) 1px solid;
+    padding: 0.3em;
+    width: 99%;
+    height: 70px;
+    position: fixed;
+    z-index: 1;
+}
+
+.menu ul li:first-child a {
+    font-size: 40px;
+    color: black;
+    text-decoration: none;
+}
+
+.menu ul li:first-child a:hover {
+    background-color: black;
+    color: white;
+    padding: 0.2em;
+}
+
+.menu ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    margin-top: 0.5em;
+}
+
+
+.menu ul li {
+    display: block;
+    flex: 1;
+    text-align: center;
+}
+
+.menu ul li p:hover{
+    background-color: rgb(238, 238, 238);
+}
+
+.menu ul li p {
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    margin: 0.4em;
+}
+
+.planifica h1{
+    text-align: center;
+}
+
+span.resaltado:hover{
+    background-color: gold;
+}
+
+.planifica .recuadroPlan {
+    text-align: center;
+    font-weight: bold;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: rgb(41, 226, 250);
+    width: 150px;
+}
+
+.planifica .recuadroPlan:hover {
+    background-color: rgb(171, 182, 21);
+}
+
+.InfoBolonia {
+    grid-column: 1;
+    grid-row: 2 / 5;
+}
+
+.InfoBolonia2 {
+    grid-column: 2;
+    grid-row: 2/5;
+}
+
+.InfoBolonia3 {
+    grid-column: 3;
+    grid-row: 2/5;
+}
+
+.infos div {
+    width: 400px;
+    border-radius: 1em;
+    background-color: aliceblue;
+    padding: 1em;
+    margin: 20px;
+}
+
+.infos h2{
+    text-align: center;
+}
+
+.infos p::first-letter{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.infos img{
+    border-radius: 1em;
+}
+
+.InfoBolonia:hover {
+    background-color: rgb(208, 223, 236);
+}
+
+.InfoBolonia2:hover {
+    background-color: rgb(208, 223, 236);
+}
+
+.InfoBolonia3:hover {
+    background-color: rgb(208, 223, 236);
+}
+
+.infos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    text-align: center;
+    margin-left: 80px;
+    margin-bottom: 60px;
+}
+
+.headerZonas {
+    background-color: black;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    font-size: 20px;
+}
+
+::selection {
+    color: gold;
+    background-color: rgba(0, 0, 0, 0.692);
+}
+
+.Sitios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 35px;
+    grid-auto-rows: minmax(100px, auto);
+    text-align: center;
+    grid-template-areas:
+    ". a b . "
+    ". c d . ";
+    align-items: start;
+}
+
+.Sitios div {
+    background-color: white;
+    padding: 1em;
+    margin: 1em;
+    padding-bottom: 2em;
+    border-bottom: 3px solid rgb(168, 168, 168);
+}
+
+.Sitios img {
+    border-bottom: 1px solid black;
+}
+
+.gps {
+    margin-top: -10px;
+    font-size: 14px;
+    color: rgb(168, 168, 168);
+}
+
+.lugar1 {
+    grid-area: a;
+    justify-content: center;
+    align-self: center;
+}
+
+.lugar2 {
+    grid-area: b;
+    justify-content: center;
+    align-self: center;
+}
+
+.lugar3 {
+    grid-area: c;
+    justify-content: center;
+    align-self: center;
+}
+
+.lugar4 {
+    grid-area: d;
+    justify-content: center;
+    align-self: center;
+}
+
+.footer{
+    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    background-color: rgb(68, 68, 68);
+    color: white;
+    border-top: rgb(168, 168, 168) 1px solid;
+    padding: 0.5em;
+    bottom: -4em;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.footer p a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer p a:hover {
+    color: rgb(68, 68, 68);
+    background-color: white;
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
+
+  .acc-kontainer {
+    width: 60%;
+    margin: auto;
+    padding: 3em;
+  }
+  .acc-kontainer .acc-body {
+    width: 98%;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    height: 0;
+    color: rgba(0, 0, 0, 0);;
+    background-color: rgba(255, 255, 255, 0.384);
+    line-height: 28px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+  }
+
+  .acc-kontainer label {
+    cursor: pointer;
+    background-color: rgba(44, 42, 42, 0.233);
+    border-bottom: 1px solid rgba(36, 36, 36, 0.1);
+    display: block;
+    padding: 15px;
+    width: 100%;
+    color: #fff;
+    font-weight: 400;
+    box-sizing: border-box;
+    z-index: 100;
+  }
+
+  .acc-kontainer input{
+    display: none;
+  }
+
+  .acc-kontainer label:before {
+    font-family: 'FontAwesome';
+    content: '\f067';
+    font-weight: bolder;
+    float: right;
+  }
+
+  .acc-kontainer input:checked+label {
+    background-color: rgb(227, 246, 255);
+    color: black;
+  }
+
+  .acc-kontainer input:checked+label:before {
+    font-family: 'FontAwesome';
+    content: '\f00d';
+    transition: 0.5s;
+  }
+
+  .acc-kontainer input:checked~.acc-body {
+    height: auto;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    padding: 20px;
+    transition: 0.5s;
+  }
