@@ -1,0 +1,457 @@
+/* body con fondo animado gradiente */
+body {
+  font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+  background: linear-gradient(-45deg, #ee7752, #e25b8f, #A0BCC2, #23d5ab);
+  background-size: 400% 400%;
+  height: 100vh;
+  animation: gradient 15s ease infinite;
+  color: #fff;
+  padding: 50px 0;
+  backface-visibility: hidden;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* pop-up de sobre.html */
+
+.box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 100px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+  color: black;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+/* Animación humo de index.html */
+@import "compass/css3";
+@import url(https://fonts.googleapis.com/css?family=Finger+Paint);
+
+.txtInit {
+  color: transparent;
+  text-align: center;
+  margin-top: -5em;
+}
+
+.txtInit span {
+  font: 5vw/100vh "Finger Paint";
+  display: inline-block;
+  text-shadow: 0 0 0 whitesmoke;
+  animation: smoky 5s 3s both;
+}
+
+.txtInit span:nth-child(even){
+  animation-name: smoky-mirror;
+}
+
+@keyframes smoky {
+  60% {
+    text-shadow: 0 0 40px whitesmoke;
+  }
+  to {
+    transform:
+      translate3d(15rem,-8rem,0)
+      rotate(-40deg)
+      skewX(70deg)
+      scale(1.5);
+    text-shadow: 0 0 20px whitesmoke;
+    opacity: 0;
+  }
+}
+
+@keyframes smoky-mirror {
+  60% {
+    text-shadow: 0 0 40px whitesmoke; }
+  to {
+    transform:
+      translate3d(18rem,-8rem,0)
+      rotate(-40deg)
+      skewX(-70deg)
+      scale(2);
+     text-shadow: 0 0 20px whitesmoke;
+    opacity: 0;
+  }
+}
+
+/* Menú de navegación*/
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:500');
+
+nav{
+  width: 100%;
+  position: fixed;
+  top:50px;
+  text-align:center;
+  z-index: 3;
+  backdrop-filter: blur(2px);
+}
+
+nav a{
+  font-family: 'Oswald', sans-serif;
+  font-weight:500;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:#16151b;
+  margin:0 15px;
+  font-size:16px;
+  letter-spacing:1px;
+  position:relative;
+  display:inline-block;
+}
+nav a:before{
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background:#16151b;
+  top:47%;
+  animation:out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+nav a:hover:before{
+  animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+
+}
+@keyframes in{
+  0%{
+    width: 0;
+    left:0;
+    right:auto;
+  }
+  100%{
+    left:0;
+    right:auto;
+    width: 100%;
+  }
+}
+@keyframes out{
+  0%{
+    width:100%;
+    left: auto;
+    right: 0;
+  }
+  100%{
+    width: 0;
+    left: auto;
+    right: 0;
+  }
+}
+@keyframes show{
+  0%{
+    opacity:0;
+    transform:translateY(-10px);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* formulario */
+.contenedor {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contenedor * {
+  box-sizing: border-box;
+}
+
+.list-flex, .list-horas {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-flex {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.list-flex li, .list-horas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.list-horas {
+  padding: 0 8px;
+  justify-content: space-between;
+}
+
+.list-flex > li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.list-flex li label, .list-flex li p {
+  padding: 8px;
+  font-weight: 300;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.list-flex > li > label, .list-flex li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+.list-flex > li > label + *, .list-horas {
+  flex: 1 0 220px;
+}
+
+.list-flex li p {
+  margin: 0;
+}
+
+.list-flex li input:not([type='checkbox']), .list-flex li textarea, .list-flex li select {
+  padding: 15px;
+  border: none;
+  border-bottom: 2px solid;
+}
+
+.list-flex li input:not([type='checkbox']):hover, .list-flex li textarea:hover, .list-flex li select:hover {
+  background-color: #f0f0f0;
+  transition: background-color .5s;
+}
+
+.list-flex li button {
+  margin-left: auto;
+  padding: 8px 16px;
+  border: none;
+  background: #333;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 2px;
+}
+
+.list-horas li {
+  width: 100px;
+}
+
+[type="date"] {
+  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+/* Animacion botón reserva */
+
+@keyframes anim{
+  0% {background-color: #333;} /*Negro*/
+  25% {background-color: #f80;} /*Naranja*/
+  50% {background-color: rgb(255, 108, 50);}
+  75% {background-color: #f80;} /*Otra vez naranja*/
+  100% {background-color: #333;} /*Negro*/
+}
+
+.list-flex li button:hover {
+  animation-name: anim;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+/* Parrafo de anotacion */
+
+p.anotacion {
+    font-size: 14px;
+    text-align: center;
+}
+
+img.form {
+    display:block;
+    margin:auto;
+    padding-bottom: 1em;
+    padding-top: 2em;
+}
+
+/* Vista */
+.vista {
+  background-color: white;
+  width: 50%;
+  margin: 0 auto;
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  padding: 2em;
+}
+
+.vista a {
+  color: black;
+}
+
+.vista h2, .vista h3, .vista p {
+  margin: 0;
+  color: black;
+}
+
+.vista h1 {
+  color: black;
+  text-align: center;
+  padding: 0.5em;
+}
+
+.vista .section {
+  padding: 70px 0;
+}
+
+.vista .container {
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+/* Carta */
+.grid {
+  display: grid;
+  grid-template: 1fr / repeat(2, 1fr);
+  grid-gap: 25px;
+}
+
+.tarjeta {
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.tarjeta_imagen {
+  position: absolute;
+  max-width: 130%;
+  left: -15%;
+  right: 0;
+  margin: 0 auto;
+  top: -18%;
+  z-index: 2;
+  transition: all 0.3s ease-out;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+}
+.tarjeta_datos {
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #ededed;
+  padding-top: calc(100% * 1.18);
+  transition: all 0.3s ease-out 0.1s;
+}
+.tarjeta_info {
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+.tarjeta_info h2 {
+  font-size: 14px;
+  font-weight: 800;
+}
+.tarjeta_info p {
+  font-size: 10px;
+  line-height: 14px;
+  color: #a2a2a2;
+}
+.card__action {
+  display: grid;
+  grid-template: 30px / 1fr 35px;
+}
+.tarjeta_precio {
+  height: 30px;
+  padding: 0 10px 0 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+}
+.tarjeta:hover .tarjeta_imagen {
+  top: -20%;
+}
+.tarjeta:hover .tarjeta_datos {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
